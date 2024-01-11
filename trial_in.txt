@@ -1,0 +1,6 @@
+It holds characters as you would expect: str[0] is the first character of the string, str[1] is the second character, and so on. But why is a 100-element array unable to hold up to 100 characters? Because C uses null-terminated strings, which means that the end of any string is marked by the ASCII value 0 (the null character), which is also represented in C as '\0'.
+Null termination is very different from the way many other languages handle strings. For example, in Pascal, each string consists of an array of characters, with a length byte that keeps count of the number of characters stored in the array. This structure gives Pascal a definite advantage when you ask for the length of a string. Pascal can simply return the length byte, whereas C has to count the characters until it finds '\0'. This fact makes C much slower than Pascal in certain cases, but in others it makes it faster, as we will see in the examples below.
+Because C provides no explicit support for strings in the language itself, all of the string-handling functions are implemented in libraries. The string I/0 operations (gets, puts, and so on) are implemented in <stdio.h>, and a set of fairly simple string manipulation functions are implemented in <string.h> (on some systems, <strings.h> ).
+
+
+this should work!
